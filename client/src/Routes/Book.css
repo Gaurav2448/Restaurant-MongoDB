@@ -1,0 +1,18 @@
+.input-box {
+    border: none;
+    outline: none;
+    font-size: medium;
+    border-radius: 8px;
+    /* margin: 0rem; */
+
+    width: 180px;
+    height: 22px;
+}
+
+.tdcol {
+  margin: 2rem 2rem 0 0;  
+}
+
+.btn:hover{
+  transform: scale(1.2);
+}
