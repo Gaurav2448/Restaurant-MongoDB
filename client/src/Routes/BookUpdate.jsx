@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SubHeading } from '../components';
 import { images } from '../constants';
 import './Book.css';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import {useNavigate} from "react-router-dom";
 export const BookUpdate=()=>{
     const [user, setUser] = useState({
         uname: "",
         date: "",
         time: "", 
       });
+
+      const navigate=useNavigate();
 
       const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -115,6 +118,7 @@ export const BookUpdate=()=>{
             );
             if(response.ok){
                 toast.success("Updated Successfully");
+                navigate("/view");
             }
             else{
                 toast.error("Not Updated");

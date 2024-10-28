@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { SubHeading } from '../components';
 import { images } from '../constants';
 import './Book.css';
